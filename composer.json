@@ -1,0 +1,25 @@
+{
+    "name": "andre/framework-landing-page",
+    "description": "A simple framework designed to create landing pages to infoproducts",
+    "type": "project",
+    "license": "Copyrighted",
+    "authors": [
+        {
+            "name": "André Paul Grandsire",
+            "email": "andrepg@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "symfony/dotenv": "^5.1"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Components\\": "components/"
+        }
+    },
+    "require-dev": {
+        "neilime/php-css-lint": "^2.2"
+    }
+}

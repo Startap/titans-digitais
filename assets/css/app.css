@@ -1,0 +1,471 @@
+/** Variable declarations to our template */
+:root {
+    --accent-color-green-dark: #219653;
+    --accent-color-green-medium: #27AE60;
+    --accent-color-green-light: #6FCF97;
+    --text-color-light: #F2F2F2;
+    --text-color-dark: #000;
+
+    --body-background: #333333;
+    --smart-shadow-filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.07)), drop-shadow(0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198)), drop-shadow(0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275)), drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035)), drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725)), drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802));
+
+    --font-family: 'Ruda', sans-serif;
+    --font-family-titles: 'Amaranth', sans-serif;
+}
+
+/** Position and display properties to Body */
+body {
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: -1;
+
+    font-size: 16px;
+    font-family: var(--font-family);
+
+    background: var(--body-background);
+}
+
+/** Typography settings - size, decorations and colors */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family);
+    color: white;
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+}
+
+h2 {
+    font-size: 1.125rem;
+    line-height: 1.3rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.text-color-accent {
+    color: var(--accent-color-green-dark);
+}
+
+.text-color-light {
+    color: var(--text-color-light);
+}
+
+.text-color-dark {
+    color: var(--text-color-dark);
+}
+
+.text-weight-900 {
+    font-weight: 900;
+}
+
+/** Alignment and padding options to elements */
+.margin-tb-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.margin-lr-20 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.padding-tb-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.padding-lr-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.padding-r-10 {
+    padding-right: 10px;
+}
+
+/** Flex elements configuration, placed in classes so we can duplicate them across the layout */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-align-start {
+    align-items: flex-start;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-space-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-space-between {
+    justify-content: space-between;
+}
+
+/** Section containers global configuration*/
+section {
+    /*padding: 40px 10px;*/
+    width: 100%;
+}
+
+/** Configuring trademark and his position, size and other properties */
+#logo-container,
+.text-align-center {
+    text-align: center;
+}
+
+#logo-container img {
+    max-height: 170px;
+}
+
+/** Configuring Call to Action buttons style */
+.button-call-to-action {
+    background: var(--accent-color-green-medium);
+    border: 1px solid var(--accent-color-green-dark);
+    box-sizing: border-box;
+
+    line-height: 2rem;
+    color: var(--text-color-light);
+    font-weight: 900;
+    font-size: 1.1em;
+    font-family: var(--font-family);
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: none;
+
+
+    position: relative;
+    display: flex;
+    align-self: center;
+    padding: 10px;
+    min-width: 100px;
+    max-width: 380px;
+
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.button-call-to-action:hover {
+    transform: scale(1.05);
+    background: var(--accent-color-green-dark);
+}
+
+/** Input and form settings */
+#subscription {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin-top: 30px;
+    align-self: center;
+}
+
+#subscription input {
+    border: 1px solid #828282;
+    background: var(--text-color-light);
+    color: var(--text-color-dark);
+    margin-bottom: 8px;
+
+    padding: 5px;
+    text-align: center;
+    line-height: 2.2rem;
+    font-size: 1.1em;
+    font-family: var(--font-family);
+}
+
+#subscription button {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+/** Items to learn with Digital Titans */
+.learning-wrapper-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.learning-container {
+    display: flex;
+    flex-basis: 33%;
+    max-width: 350px;
+    flex-direction: row;
+    border: 2px solid var(--accent-color-green-medium);
+    background: var(--text-color-light);
+    color: var(--text-color-dark);
+}
+
+.learning-number {
+    font-family: var(--font-family-titles);
+    font-size: 4em;
+    padding: 10px 20px 10px 20px;
+    color: var(--text-color-light);
+    background: var(--accent-color-green-medium)
+}
+
+.learning-description {
+    font-size: 1.05em;
+    font-weight: normal;
+    padding: 10px 10px 10px 10px;
+}
+
+/** Another items on layout */
+.divisor {
+    width: 100%;
+    max-width: 650px;
+    height: 10px;
+    background: var(--accent-color-green-dark);
+    align-self: center;
+    margin: 20px 0;
+    display: block;
+}
+
+#titans-instructor {
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+}
+
+/** Specific design elements */
+#digital-titans-container {
+    max-width: 700px;
+    text-align: center;
+    margin: auto;
+}
+
+.thankyou-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    color: var(--text-color-light);
+}
+
+.thankyou-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.thankyou-row:nth-child(odd) .thankyou-item-container {
+    text-align: right;
+}
+
+.thankyou-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-color-green-medium);
+    flex-basis: 50%;
+    min-height: 260px;
+}
+
+.thankyou-item-container p {
+    width: 90%;
+}
+
+.thankyou-item-container:nth-child(even) {
+    background: var(--accent-color-green-dark);
+}
+
+.thankyou-item-container img {
+    filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.07)) drop-shadow(0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198)) drop-shadow(0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275)) drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802));
+}
+
+#thankyou-call-to-action {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#thankyou-call-to-action button {
+    margin: auto;
+}
+
+#titans-instructor,
+.learning-wrapper-container {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.instructor-image {
+    margin-bottom: 10px;
+}
+
+.instructor-image img {
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px -10px white;
+    border: 2px solid var(--accent-color-green-light);
+}
+
+.instructor-container .instructor-title,
+.instructor-container .instructor-social-network {
+    color: var(--accent-color-green-dark);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.instructor-container .instructor-presentation {
+    text-align: center;
+    color: var(--text-color-light);
+}
+
+.instructor-title {
+    font-size: 1.1rem;
+}
+
+.instructor-social-network {
+    font-size: 0.9rem;
+}
+
+.instructor-presentation {
+    font-size: 0.8rem;
+}
+
+.instructor-description {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*****************************************************************
+*
+*   MOBILE REPLACEMENTS FOR LAYOUT
+*
+*
+*****************************************************************/
+@media screen and (max-width: 780px) {
+    #subscription {
+        width: 350px;
+    }
+
+    .flex-row,
+    .learning-wrapper-container {
+        flex-direction: column;
+    }
+
+    .learning-wrapper-container {
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #digital-titans-container h2 {
+        margin: 0 20px;
+    }
+
+    .instructor-container .instructor-title,
+    .instructor-container .instructor-social-network {
+        color: var(--text-color-dark);
+    }
+
+    .instructor-description {
+        max-width: 370px;
+        background: var(--accent-color-green-dark);
+        padding: 20px;
+        box-sizing: border-box;
+        filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.07)) drop-shadow(0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198)) drop-shadow(0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275)) drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802));
+    }
+}
+
+@media screen
+and (min-width: 1021px) {
+    .instructor-container {
+        max-width: 500px;
+        border: 2px solid var(--accent-color-green-dark);
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        align-self: center;
+        margin: 30px auto;
+    }
+
+    .instructor-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        padding: 10px 10px 0 10px;
+    }
+
+    .instructor-image {
+        position: relative;
+        margin-bottom: 0;
+    }
+
+    .instructor-image::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50px;
+        width: 100%;
+        content: "";
+        display: block;
+        z-index: 2;
+        background: url('/assets/images/border-teacher.svg') no-repeat;
+    }
+
+    .instructor-image img {
+        padding: 0;
+        margin: 0;
+        display: block;
+        height: 100%;
+        max-height: 230px;
+
+        border-radius: 0;
+        box-sizing: border-box;
+        box-shadow: none;
+        border: none;
+    }
+
+
+    .instructor-container .instructor-title,
+    .instructor-container .instructor-presentation,
+    .instructor-container .instructor-social-network {
+        text-align: left;
+    }
+}
+
+footer {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-color-light);
+    font-family: var(--font-family);
+    text-align: center;
+    align-self: center;
+    margin: auto;
+    min-height: 150px;
+}
