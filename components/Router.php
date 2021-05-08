@@ -41,8 +41,11 @@ class Router
     {
         foreach (self::$availableRoutes as $routePattern => $routeTarget) {
             if (\preg_match($routePattern, $requestedUri, $params)) {
-                $this->checkAndCallControllerMethod($routeTarget);
-                $this->callClosureMethod($routeTarget, $params);
+                if (is_string($routeTarget)) {
+                    $this->checkAndCallControllerMethod($routeTarget);
+                } else {
+                    $this->callClosureMethod($routeTarget, $params);
+                }
             }
         }
     }
@@ -57,11 +60,9 @@ class Router
 
     private function checkAndCallControllerMethod(String $routeTarget)
     {
-        if (is_string($routeTarget)) {
-            list($targetController, $targetMethod) = explode('@', $routeTarget);
+        list($targetController, $targetMethod) = explode('@', $routeTarget);
 
-            $controllerInstance = new $targetController();
-            $controllerInstance->$targetMethod();
-        }
+        $controllerInstance = new $targetController();
+        $controllerInstance->$targetMethod();
     }
 }
