@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400');
+:root {
+    --color-call-to-action: #00bb2d;
+    --color-default-text: #FFFFFF;
+    --color-accent-text: #abfbf0;
+}
+
 html {
     font-size: 100%;
     width: 100%;
@@ -7,22 +12,24 @@ html {
 /*16px*/
 
 body {
-    background: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    font-size: 16px;
     line-height: 1.75;
-    color: #000000;
+    color: var(--color-default-text);
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
     width: 100%;
-    height: fit-content;
     margin: 0;
     padding: 0;
+    background: #000000 url('/assets/images/jogo_mkt_digital/website_bg.jpg') no-repeat center right / cover;
+    background-attachment: fixed;
 }
 
 p {
     margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 h1, h2, h3, h4, h5 {
@@ -59,4 +66,106 @@ small, .text_small {
 
 strong {
     font-weight: 700;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.article p {
+    text-align: center;
+}
+
+.article__header {
+    text-align: center;
+}
+
+.evento__online {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.evento__online .iconify {
+    height: 1.5rem;
+    width: 1.8rem;
+}
+
+.animation__evento_online {
+    font-size: 1.4rem;
+    color: var(--color-accent-text);
+    animation: bounceScale 2s ease-in-out 0s infinite both;
+}
+
+@keyframes bounceScale {
+    0% { transform: scale(1) }
+    50% { transform: scale(1.1) }
+    100% { transform: scale(1) }
+}
+
+.jogo_list_item {
+    max-width: 850px;
+    margin: auto;
+}
+
+.jogo_list_item li {
+    line-height: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.jogo_list_item li::before {
+    content: '';
+    left: 0;
+    position: relative;
+    width: 2.5rem;
+    height: 1.3rem;
+    background: url('https://api.iconify.design/bi:patch-check-fill.svg') no-repeat center center / contain;
+    filter: invert(1);
+}
+
+/** Form reset */
+
+.rd-section {
+    background: transparent !important;
+}
+
+/** Responsive YouTube container */
+
+.video__wrapper {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    align-self: center;
+    max-width: 650px;
+}
+
+.video__iframe_container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video__iframe_container iframe,
+.video__iframe_container object,
+.video__iframe_container embed {
+    width:100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    position: absolute;
 }
