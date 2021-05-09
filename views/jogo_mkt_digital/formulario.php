@@ -36,10 +36,25 @@
     </p>
 
     <!-- Form rendering -->
-    <div role="main" id="newtimes-formulario-leads-page-9cc80504cb28de1971aa"></div>
-</article>
+    <?php
+        $formName = $_SERVER['REQUEST_URI'] === '/jogo-mktdigital' ? 'jogo_marketing_form_a' : 'jogo_marketing_form_b';
+    ?>
+    <form class="form__control" name="<?php echo $formName; ?>">
+        <div class="input__group">
+            <label for="__name">Nome</label>
+            <input class="input__control" type="text" id="__name" placeholder="Nome e Sobrenome">
+        </div>
+        <div class="input__group">
+            <label for="__email">E-mail</label>
+            <input class="input__control" type="email" id="__email" placeholder="email@email.com">
+        </div>
+        <div class="input__group">
+            <label for="__phone">Telefone</label>
+            <input class="input__control" type="phone" id="__phone" placeholder="99 999 999 999">
+        </div>
 
-<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
-<script type="text/javascript">
-    new RDStationForms('newtimes-formulario-leads-page-9cc80504cb28de1971aa', 'UA-154439101-1').createForm();
-</script>
+        <div class="input__group">
+            <button type="submit">QUERO SER TITÃ DIGITAL</button>
+        </div>
+    </form>
+</article>
