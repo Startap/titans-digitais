@@ -22,9 +22,9 @@
         </div>
     </div>
 
-    <p>
+    <p class="headline__call text__center">
         Domine o verdadeiro jogo do Marketing Digital e comece a prosperar por
-        meio das <strong>três profissões mais valorizadas e cobiçadas</strong> do Digital.
+        meio das <strong class="text__accent">três profissões mais valorizadas e cobiçadas</strong> do Digital.
     </p>
 
     <p>
