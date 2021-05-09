@@ -1,8 +1,10 @@
-<article>
-    <h1>Com quem você vai aprender</h1>
+<article class="article">
+    <h1 class="article__header">Com quem você vai aprender</h1>
 
     <section>
         <h2>Gabriel Santos</h2>
+
+        <img src="/assets/images/teacher_titan.png" alt="Foto Gabriel Santos">
 
         <p>
             Sócio-fundador e CEO da New Times, responsável pela estratégia de
