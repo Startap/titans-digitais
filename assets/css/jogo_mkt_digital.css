@@ -194,3 +194,34 @@ p.text__center {
     left: 0;
     position: absolute;
 }
+
+form.form__control {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.input__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+.input__group .input__control {
+    line-height: 250%;
+    text-indent: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+}
+
+.input__group button {
+    border: none;
+    background: var(--color-call-to-action);
+    padding: 1rem 2rem;
+    color: var(--color-default-text);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
