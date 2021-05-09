@@ -10,8 +10,7 @@
 
     <title>%APP_TITLE%</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/assets/css/reset.css">
     <link rel="stylesheet" href="/assets/css/jogo_mkt_digital.css">
