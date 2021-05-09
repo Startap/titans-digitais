@@ -1,7 +1,7 @@
 :root {
     --color-call-to-action: #00bb2d;
     --color-default-text: #FFFFFF;
-    --color-accent-text: #abfbf0;
+    --color-accent-text: #0c9dd8;
 }
 
 html {
@@ -103,6 +103,37 @@ p.text__center {
     margin-bottom: 2rem;
 }
 
+.headline__container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.headline__container img {
+    height: 100px;
+    align-self: center;
+}
+
+.headline__container .article__header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.headline__container .article__header small {
+    font-size: 0.7em;
+    line-height: .5em;
+}
+
+.headline__container .article__header span {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
 .evento__online {
     display: block;
     text-align: center;
@@ -149,17 +180,19 @@ p.text__center {
     position: relative;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     font-size: 1.2rem;
+    padding-left: 1.8rem;
+    box-sizing: border-box;
 }
 
 .jogo_list_item li::before {
     content: '';
     left: 0;
-    position: relative;
-    width: 2.5rem;
-    height: 1.3rem;
-    background: url('https://api.iconify.design/ic:round-label.svg') no-repeat center center / contain;
+    position: absolute;
+    width: 1.3rem;
+    height: 100%;
+    background: url('https://api.iconify.design/ic:round-label.svg') no-repeat center 0.2rem / contain;
     filter: invert(1);
 }
 
@@ -209,6 +242,10 @@ form.form__control {
     margin-bottom: 0.5rem;
 }
 
+.input__group label {
+    font-size: 0.9rem;
+}
+
 .input__group .input__control {
     line-height: 250%;
     text-indent: 5px;
@@ -216,12 +253,130 @@ form.form__control {
     font-size: 1.1rem;
 }
 
-.input__group button {
+.call_to_action {
     border: none;
     background: var(--color-call-to-action);
-    padding: 1rem 2rem;
+    padding: .7rem 1.2rem;
     color: var(--color-default-text);
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     cursor: pointer;
+}
+
+.profile__card h2 {
+    color: var(--color-accent-text);
+    font-weight: bold;
+    font-variant: all-small-caps;
+}
+
+.second_cta_container {
+    width: 80%;
+    max-width: 450px;
+    text-align: center;
+    margin: auto;
+}
+
+.gabriel_santos_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 5px solid white;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 10px 10px -10px black;
+    width: fit-content;
+    justify-content: center;
+}
+
+.gabriel_santos_container .profile__image {
+    flex-basis: 260px;
+    filter: drop-shadow(0px -1px 6px var(--color-accent-text));
+    opacity: 0.8;
+    background: url('/assets/images/gabriel_santos.png') no-repeat bottom center / contain;
+}
+
+.gabriel_santos_container .profile__card {
+    flex-basis: 50%;
+}
+
+.profile__card h1 {
+    margin-bottom: 0;
+    font-size: 3rem;
+}
+
+footer {
+    padding: 5rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+@media screen and (max-width: 600px) {
+    .gabriel_santos_container .profile__card {
+        flex-basis: 100%;
+    }
+    .gabriel_santos_container .profile__image {
+        height: 80%;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        opacity: .3;
+        background-position: left top;
+    }
+}
+
+/** Pagina de obrigado */
+
+.attention_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid red;
+    background: #e65454;
+    box-shadow: 0 10px 15px -10px rgb(0 0 0 / 50%);
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.attention_bar .iconify {
+    font-size: 2rem;
+}
+
+a.call_to_action {
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 10px -5px rgb(0 0 0 / 50%);
+}
+
+.progress__bar {
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: var(--color-default-text);
+    margin: 0 0 20px 0;
+}
+
+.progress__bar .indicator {
+    position: relative;
+    width: 0%;
+    height: 100%;
+    background: var(--color-accent-text);
+    /* transform: skew(-13deg); */
+    left: -10px;
+    color: var(--color-default-text);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-size: 1.2rem;
+    align-self: center;
 }

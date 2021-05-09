@@ -1,9 +1,21 @@
+<!-- Form rendering -->
+<?php
+$formName = $_SERVER['REQUEST_URI'] === '/jogo-mktdigital' ? 'jogo_marketing_form_a' : 'jogo_marketing_form_b';
+?>
+
 <article class="article">
-    <h1 class="article__header">O JOGO DO MARKETING DIGITAL</h1>
+    <section class="headline__container">
+        <img src="/assets/images/titas_logo.png" alt="Titãs Digitais - O jogo do marketing digital">
+        <h1 class="article__header">
+            <small>O JOGO DO</small>
+            <span>MARKETING DIGITAL</span>  
+        </h1>
+    </section>
 
     <?php
     $htmlEmbedParamenters = ['autoplay=0', 'controls=0', 'disablekb=1', 'fs=0', 'modestbranding=1', 'rel=0', 'showinfo=0'];
     $htmlSalesVideoHtml = <<<htmlSalesVideoHtmlTemplate
+                <div class="video__iframe_container">
                     <iframe 
                         width="699" 
                         height="393" 
@@ -12,19 +24,18 @@
                         frameborder="0" 
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></iframe>
+                </div>
                 htmlSalesVideoHtmlTemplate;
     $htmlSalesVideoHtml = str_replace('%parameters', implode("&", $htmlEmbedParamenters), $htmlSalesVideoHtml);
     ?>
 
     <div class="video__wrapper">
-        <div class="video__iframe_container">
-            <?php echo $htmlSalesVideoHtml; ?>
-        </div>
+        <?php if ($formName === 'jogo_marketing_form_a') echo $htmlSalesVideoHtml; ?>
     </div>
 
     <p class="headline__call text__center">
         Domine o verdadeiro jogo do Marketing Digital e comece a prosperar por
-        meio das <strong class="text__accent">três profissões mais valorizadas e cobiçadas</strong> do Digital.
+        meio de uma das <strong class="text__accent">três profissões mais valorizadas e cobiçadas</strong> do Digital.
     </p>
 
     <p>
@@ -35,11 +46,7 @@
         </span>
     </p>
 
-    <!-- Form rendering -->
-    <?php
-        $formName = $_SERVER['REQUEST_URI'] === '/jogo-mktdigital' ? 'jogo_marketing_form_a' : 'jogo_marketing_form_b';
-    ?>
-    <form class="form__control" name="<?php echo $formName; ?>">
+    <form id="subscription" class="form__control" name="<?php echo $formName; ?>">
         <div class="input__group">
             <label for="__name">Nome</label>
             <input class="input__control" type="text" id="__name" placeholder="Nome e Sobrenome">
@@ -54,7 +61,7 @@
         </div>
 
         <div class="input__group">
-            <button type="submit">QUERO SER TITÃ DIGITAL</button>
+            <button class="call_to_action" type="submit">GARANTIR MINHA VAGA</button>
         </div>
     </form>
 </article>

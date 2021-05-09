@@ -1,5 +1,6 @@
 <article class="article">
-    <h1 class="article__header">O que você vai aprender nesse evento
+    <h1 class="article__header">
+        O que você vai aprender nesse evento<br>
         <strong>100% online e gratuito</strong>
     </h1>
 
