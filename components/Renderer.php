@@ -58,7 +58,7 @@ class Renderer
         $scriptsTemplate = '';
         $footerFile = \file_get_contents($this->application->getAppPath('views/layout/footer'));
 
-        if ($_ENV['ENVIRONMENT'] == 'production') {
+        if (isset($_ENV['ENVIRONMENT']) && $_ENV['ENVIRONMENT'] == 'production') {
             $scriptsTemplate = file_get_contents($this->application->getAppPath('views/layout/scripts'));
         }
 
