@@ -21,14 +21,18 @@ window.document.onreadystatechange = () => {
     }
 
     let progressBar = document.querySelector('.progress__bar .indicator')
-    let progressBarCurrent = 0
-    setTimeout(stepProgressBar, 50)
+    if (progressBar) {
+        let progressBarCurrent = 0
+        let intervalProgress = setInterval(handleProgressBar, 50)
 
-    function stepProgressBar() {
-        progressBarCurrent++
-        progressBar.style.width = progressBarCurrent + '%'
-        progressBar.innerHTML = progressBarCurrent * 1 + '%'
-        if (progressBarCurrent < 80)
-            setTimeout(stepProgressBar, 20)
+        progressBar.classList.add('animate__progressbar')
+
+        function handleProgressBar() {
+            progressBarCurrent++
+            progressBar.innerHTML = progressBarCurrent + '%'
+
+            if (progressBarCurrent > 79)
+                clearInterval(intervalProgress)
+        }
     }
 }

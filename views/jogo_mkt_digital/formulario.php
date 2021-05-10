@@ -49,7 +49,7 @@ $formName = $_SERVER['REQUEST_URI'] === '/jogo-mktdigital' ? 'jogo_marketing_for
     <form id="subscription" class="form__control" name="<?php echo $formName; ?>">
         <div class="input__group">
             <label for="__name">Nome</label>
-            <input class="input__control" type="text" id="__name" placeholder="Nome e Sobrenome">
+            <input class="input__control" type="text" id="__name" placeholder="Seu nome completo">
         </div>
         <div class="input__group">
             <label for="__email">E-mail</label>

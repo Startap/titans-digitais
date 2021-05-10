@@ -20,7 +20,7 @@
         e as informações referentes ao evento.
     </p>
 
-    <a href="#" target="_blank" rel="norel nofollow" class="call_to_action">QUERO ENTRAR NO GRUPO VIP</a>
+    <a href="<?php echo $_ENV['WHATSAPP_URL']; ?>" target="_blank" rel="norel nofollow" class="call_to_action">QUERO ENTRAR NO GRUPO VIP</a>
 
     <p class="text__center">Grupo fechado e silencioso</p>
 </section>
