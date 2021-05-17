@@ -19,13 +19,15 @@ $formName = $_SERVER['REQUEST_URI'] === '/jogo-mktdigital' ? 'jogo_marketing_for
                     <iframe 
                         width="699" 
                         height="393" 
-                        src="https://www.youtube.com/embed/_2hB1YUErZ0?%parameters" 
+                        src="https://www.youtube.com/embed/%videoId?%parameters" 
                         title="YouTube video player" 
                         frameborder="0" 
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></iframe>
                 </div>
                 htmlSalesVideoHtmlTemplate;
+
+    $htmlSalesVideoHtml = str_replace('%videoId', $_ENV['YOUTUBE_ID'], $htmlSalesVideoHtml);
     $htmlSalesVideoHtml = str_replace('%parameters', implode("&", $htmlEmbedParamenters), $htmlSalesVideoHtml);
     ?>
 
@@ -46,7 +48,7 @@ $formName = $_SERVER['REQUEST_URI'] === '/jogo-mktdigital' ? 'jogo_marketing_for
         </span>
     </p>
 
-    <form id="subscription" class="form__control" name="<?php echo $formName; ?>">
+    <form id="subscription" method="POST" action="/obrigado" class="form__control" name="<?php echo $formName; ?>">
         <div class="input__group">
             <label for="__name">Nome</label>
             <input class="input__control" type="text" id="__name" placeholder="Seu nome completo">

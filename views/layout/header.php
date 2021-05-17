@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="/assets/css/jogo_mkt_digital.css">
 
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <meta name="facebook-domain-verification" content="cotm4c3fru3vzqzm7udrq8k8n09142" />
 </head>
 
 <body>
