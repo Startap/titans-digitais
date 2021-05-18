@@ -42,6 +42,7 @@
     })(window, document, 'script', 'dataLayer', 'GTM-WZW2XTG');
 
     window.dataLayer = window.dataLayer || [];
+
     function gtag() {
         dataLayer.push(arguments);
     }
@@ -53,3 +54,10 @@
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZW2XTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<script>
+    fbq('trackCustom', '%paginaOrigin')
+    gtag('event', 'conversion', {
+        'send_to': 'AW-981525115/euVpCJv--pMCEPvEg9QD'
+    });
+</script>

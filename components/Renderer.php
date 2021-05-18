@@ -59,7 +59,10 @@ class Renderer
         $footerFile = \file_get_contents($this->application->getAppPath('views/layout/footer'));
 
         if (isset($_ENV['ENVIRONMENT']) && $_ENV['ENVIRONMENT'] == 'production') {
+            $facebookConversion = $_GET['pagina'] === 'jogo_marketing_form_a' ? 'pagina-com-video' : 'pagina-sem-video';
+            
             $scriptsTemplate = file_get_contents($this->application->getAppPath('views/layout/scripts'));
+            $scriptsTemplate = str_replace('%paginaOrigin', $facebookConversion, $scriptsTemplate);
         }
 
         $footerFile = str_replace('%scripts_template%', $scriptsTemplate, $footerFile);

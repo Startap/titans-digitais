@@ -56,15 +56,15 @@ $formName = $_SERVER['REQUEST_URI'] === '/jogo-mktdigital' ? 'jogo_marketing_for
         name="<?php echo $formName; ?>">
         <div class="input__group">
             <label for="__name">Nome</label>
-            <input class="input__control" type="text" id="__name" placeholder="Seu nome completo">
+            <input required class="input__control" type="text" id="__name" placeholder="Seu nome completo">
         </div>
         <div class="input__group">
             <label for="__email">E-mail</label>
-            <input class="input__control" type="email" id="__email" placeholder="email@email.com">
+            <input required class="input__control" type="email" id="__email" placeholder="email@email.com">
         </div>
         <div class="input__group">
             <label for="__phone">Telefone</label>
-            <input class="input__control" type="phone" id="__phone" placeholder="99 999 999 999">
+            <input required class="input__control" type="phone" id="__phone" placeholder="99 999 999 999">
         </div>
 
         <div class="input__group">
