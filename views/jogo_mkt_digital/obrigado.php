@@ -24,3 +24,17 @@
 
     <p class="text__center">Grupo fechado e silencioso</p>
 </section>
+
+<?php 
+if (isset($_ENV['ENVIRONMENT']) && $_ENV['ENVIRONMENT'] === 'production') 
+{
+    $facebookScript = <<<FbScript
+        <script>
+        fbq('trackCustom', '%paginaOrigin')
+        </script>
+    FbScript;
+
+    $conversionOrigin = $_GET['pagina'] === 'jogo_marketing_form_a' ? 'pagina-com-video' : 'pagina-sem-video'; 
+    echo str_replace('%paginaOrigin', $conversionOrigin, $facebookScript);
+}
+?>

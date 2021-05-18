@@ -48,7 +48,12 @@ $formName = $_SERVER['REQUEST_URI'] === '/jogo-mktdigital' ? 'jogo_marketing_for
         </span>
     </p>
 
-    <form id="subscription" method="POST" action="/obrigado" class="form__control" name="<?php echo $formName; ?>">
+    <form 
+        id="subscription" 
+        method="POST" 
+        action=<?php echo "/obrigado?pagina=$formName"; ?> 
+        class="form__control" 
+        name="<?php echo $formName; ?>">
         <div class="input__group">
             <label for="__name">Nome</label>
             <input class="input__control" type="text" id="__name" placeholder="Seu nome completo">
