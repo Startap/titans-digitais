@@ -31,6 +31,7 @@ if (isset($_ENV['ENVIRONMENT']) && $_ENV['ENVIRONMENT'] === 'production')
     $facebookScript = <<<FbScript
         <script>
         fbq('trackCustom', '%paginaOrigin')
+        gtag('event', 'conversion', {'send_to': 'AW-981525115/euVpCJv--pMCEPvEg9QD'});
         </script>
     FbScript;
 
