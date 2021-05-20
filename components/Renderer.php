@@ -59,10 +59,25 @@ class Renderer
         $footerFile = \file_get_contents($this->application->getAppPath('views/layout/footer'));
 
         if (isset($_ENV['ENVIRONMENT']) && $_ENV['ENVIRONMENT'] == 'production') {
-            $facebookConversion = $_GET['pagina'] === 'jogo_marketing_form_a' ? 'pagina-com-video' : 'pagina-sem-video';
             
             $scriptsTemplate = file_get_contents($this->application->getAppPath('views/layout/scripts'));
-            $scriptsTemplate = str_replace('%paginaOrigin', $facebookConversion, $scriptsTemplate);
+
+            if (strpos($_SERVER['REQUEST_URI'], 'obrigado') !== false) {
+                $fbTag = <<<pixelConversion
+                    <script>
+                        fbq('trackCustom', '%paginaOrigin')
+                        gtag('event', 'conversion', {'send_to': 'AW-981525115/euVpCJv--pMCEPvEg9QD'});
+                    </script>
+                pixelConversion;
+
+                $facebookConversion = str_replace(
+                    '%paginaOrigin', 
+                    $_GET['pagina'] === 'jogo_marketing_form_a' ? 'pagina-com-video' : 'pagina-sem-video', 
+                    $fbTag
+                );
+                
+                $scriptsTemplate .= $facebookConversion;
+            }
         }
 
         $footerFile = str_replace('%scripts_template%', $scriptsTemplate, $footerFile);
