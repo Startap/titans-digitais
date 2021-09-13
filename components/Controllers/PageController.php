@@ -20,6 +20,13 @@ class PageController extends ApplicationController
     }
 
     public function obrigado() {
-        $this->renderViewport(['jogo_mkt_digital/obrigado']);
+        $this->renderViewport(['profissoes_do_marketing/obrigado']);
+    }
+
+    public function profissoesDoMarketing() {
+        $this->renderViewport([
+            'profissoes_do_marketing/template',
+            'profissoes_do_marketing/formulario',
+        ]);
     }
 }
