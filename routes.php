@@ -13,5 +13,5 @@ use Components\Router;
 //Router::route('/jogo-mktdigital', '\Components\Controllers\PageController@marketingDigitalA');
 //Router::route('/ojogo-mktdigital', '\Components\Controllers\PageController@marketingDigitalB');
 
-Router::route('/', '\Components\Controllers\PageController@profissoesMaisBemPagas');
+Router::route('/', '\Components\Controllers\PageController@profissoesDoMarketing');
 Router::route('/obrigado', '\Components\Controllers\PageController@obrigado');
