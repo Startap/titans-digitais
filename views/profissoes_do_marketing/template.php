@@ -1,4 +1,4 @@
-<article class="article">
+<article id="profissoes_bem_pagas" class="article">
     <section class="headline__container">
         <h1 class="article__header">
             <small>As 3 profissões</small>
@@ -21,6 +21,10 @@
     </section>
 
     <section id="button__container">
-        Aula exclusiva e gratuita no dia 06 de outubro de 2021.
+        <p>
+            Aula <strong class="text__accent">exclusiva e gratuita</strong> 
+            <br>no dia 06 de outubro de 2021.
+        </p>
+        <button type="button">clique para participar</button>
     </section>
 </article>

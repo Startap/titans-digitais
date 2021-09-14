@@ -143,16 +143,75 @@ p.text__center {
     max-width: 500px;
     margin: 0 0 0 auto;
     text-align: right;
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+}
+
+#profissoes_bem_pagas {
+    position: relative;
+    z-index: 200;
+    font-family: 'Glory', sans-serif;
+    font-size: 1.3rem;
+}
+
+#profissoes_bem_pagas::after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    left: 0; top: 0;
+    z-index: -100;
+    background: url('/assets/images/gabriel_perfil.webp') no-repeat -7rem bottom / contain;
+    filter: saturate(0.3);
 }
 
 #numeros__lancamento {
     display: flex;
     flex-direction: column;
     max-width: 500px;
-    line-height: 1em;
+    line-height: 1.5em;
     text-align: right;
     margin: 2.5rem 0 0 auto;
     position: relative;
+}
+
+#numeros__lancamento p {
+    margin-bottom: 0;
+    font-size: 1.4rem;
+}
+
+#button__container {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin: 20px 0;
+}
+
+#button__container p {
+    line-height: 1.8rem;
+    font-size: 1.8rem;
+    margin: 15px 0;
+}
+
+#button__container button,
+.modal__button {
+    padding: 16px 32px;
+    width: 350px;
+    margin-left: auto;
+    border-radius: 8px;
+    border: none;
+    margin-top: 15px;
+    background: linear-gradient(180deg, var(--color-accent-text), #d49118);
+    text-transform: uppercase;
+    line-height: 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #051427;
+}
+
+#subscription .modal__button {
+    width: 100%;
 }
 
 .evento__online {
@@ -430,4 +489,56 @@ a.call_to_action {
     .article__header :nth-child(3) {
         text-align: right;
     }
+}
+
+#modalFormulario {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0, .6);
+    z-index: 300;
+    display: flex;
+}
+
+#modalFormulario input {
+    background: #efeeee;
+    border: 1px solid #9a9494;
+    border-radius: 8px;
+}
+
+.modal__content {
+    position: relative;
+    max-width: 500px;
+    justify-self: center;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px -10px;
+}
+
+.modal__content label {
+    color: black;
+    font-family: 'Glory', sans-serif;
+}
+
+.modal__content p {
+    color: black;
+    text-align: center;
+    font-family: 'Glory', sans-serif;
+    line-height: 1.4rem;
+    font-size: 1.3rem;
+    max-width: 90%;
+    margin: 2rem auto;
+}
+
+.modal__content .close {
+    color: black;
+    position: absolute;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    box-sizing: border-box;
+    right: 0;
+    top: 0;
 }
