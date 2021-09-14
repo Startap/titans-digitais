@@ -28,11 +28,3 @@
 
     <p class="text__center">Grupo fechado e silencioso</p>
 </section>
-
-<script type="text/javascript">
-document.onreadystatechange = function () {
-    if (document.readyState === 'complete') {
-        console.log('ready document')
-    }
-}
-</script>

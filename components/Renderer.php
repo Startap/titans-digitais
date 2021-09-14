@@ -65,18 +65,12 @@ class Renderer
             if (strpos($_SERVER['REQUEST_URI'], 'obrigado') !== false) {
                 $fbTag = <<<pixelConversion
                     <script>
-                        fbq('trackCustom', '%paginaOrigin')
+                        fbq('trackCustom', 'obrigado')
                         gtag('event', 'conversion', {'send_to': 'AW-981525115/euVpCJv--pMCEPvEg9QD'});
                     </script>
                 pixelConversion;
-
-                $facebookConversion = str_replace(
-                    '%paginaOrigin', 
-                    $_GET['pagina'] === 'jogo_marketing_form_a' ? 'pagina-com-video' : 'pagina-sem-video', 
-                    $fbTag
-                );
                 
-                $scriptsTemplate .= $facebookConversion;
+                $scriptsTemplate .= $fbTag;
             }
         }
 
