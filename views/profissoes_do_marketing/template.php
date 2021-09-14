@@ -16,14 +16,14 @@
     </section>
 
     <section id="numeros__lancamento">
-        <p>+ de <strong class="text__accent">1 MILHÃO</strong> investidos em anúncios online</p>
-        <p>+ de <strong class="text__accent">53 lançamentos</strong> de sucesso</p>
+        <p>+ de <strong class="destaque text__accent">1 MILHÃO</strong> investidos em anúncios online</p>
+        <p>+ de <strong class="destaque text__accent">53 lançamentos</strong> de sucesso</p>
     </section>
 
     <section id="button__container">
         <p>
             Aula <strong class="text__accent">exclusiva e gratuita</strong>
-            <br>no dia 06 de outubro de 2021.
+            <br>no dia <strong class="text__accent">06 de outubro de 2021</strong>.
         </p>
         <button type="button">clique para participar</button>
     </section>

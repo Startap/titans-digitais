@@ -1,7 +1,7 @@
 <div id="modalFormulario" class="modal">
     <div class="modal__content">
         <span class="close">&times;</span>
-        
+
         <p>Digite seu e-mail abaixo e prepare-se para uma aula de
             <strong style="font-size: 1.5rem;">
                 conteúdo exclusivo
@@ -12,9 +12,9 @@
             </strong>
         </p>
 
-        <form id="subscription" method="POST" action="https://newtimes.activehosted.com/proc.php" class="form__control">
-            <input type="hidden" name="u" value="3" />
-            <input type="hidden" name="f" value="3" />
+        <form method="POST" action="https://newtimes.activehosted.com/proc.php" id="_form_5_" class="_form _form_5 _inline-form  _dark" novalidate>
+            <input type="hidden" name="u" value="5" />
+            <input type="hidden" name="f" value="5" />
             <input type="hidden" name="s" />
             <input type="hidden" name="c" value="0" />
             <input type="hidden" name="m" value="0" />
