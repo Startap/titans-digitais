@@ -26,6 +26,7 @@ body {
     padding: 0;
     background: #000000 url('/assets/images/jogo_mkt_digital/website_bg.jpg') no-repeat center right / cover;
     background-attachment: fixed;
+    background-blend-mode: luminosity;
 }
 
 p {
@@ -110,8 +111,7 @@ p.text__center {
 
 .headline__container {
     width: 100%;
-    /* max-width: 700px; */
-    margin: 0 0 auto 0;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
@@ -154,7 +154,7 @@ p.text__center {
     font-size: 1.3rem;
 }
 
-#profissoes_bem_pagas::after {
+#profissoes_bem_pagas::before {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -465,9 +465,8 @@ a.call_to_action {
     width: 0%;
     height: 100%;
     background: var(--color-accent-text);
-    /* transform: skew(-13deg); */
     left: -10px;
-    color: var(--color-default-text);
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -497,7 +496,14 @@ a.call_to_action {
     width: 100vw;
     background: rgba(0,0,0, .6);
     z-index: 300;
-    display: flex;
+    display: none;
+    opacity: 0%;
+    transition: opacity .7s ease-in-out;
+}
+
+#modalFormulario.show__modal {
+    display: flex !important;
+    opacity: 100%;
 }
 
 #modalFormulario input {
@@ -541,4 +547,26 @@ a.call_to_action {
     box-sizing: border-box;
     right: 0;
     top: 0;
+}
+
+
+@media screen and (max-width: 900px) {
+    #profissoes_bem_pagas::before {
+        position: relative;
+        height: 200px;
+        background-position: center bottom;
+        margin-bottom: -40px;
+    }
+
+    #headline__profissoes, 
+    #numeros__lancamento,
+    #button__container {
+        text-align: center;
+    }
+
+    #button__container button,
+    #headline__profissoes,
+    #numeros__lancamento {
+        margin-right: auto;
+    }
 }

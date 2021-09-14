@@ -22,7 +22,7 @@
 
     <section id="button__container">
         <p>
-            Aula <strong class="text__accent">exclusiva e gratuita</strong> 
+            Aula <strong class="text__accent">exclusiva e gratuita</strong>
             <br>no dia 06 de outubro de 2021.
         </p>
         <button type="button">clique para participar</button>

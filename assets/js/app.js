@@ -1,3 +1,5 @@
+var modalRoot;
+
 function goBack() {
     window.history.back();
 }
@@ -10,6 +12,35 @@ function scrollToTop() {
     left: 0,
         behavior: 'smooth'
     });
+}
+
+function setupModal() {
+    var triggerModal, modalContent, closeButton;
+
+    modalRoot = document.querySelector("#modalFormulario");
+    closeButton = document.querySelector("#modalFormulario .close");
+    triggerModal = document.querySelector("#button__container button");
+    modalContent = document.querySelector(".modal__content");
+
+    modalRoot.addEventListener("click", rootModalClick);
+    modalRoot.addEventListener("click", rootModalClick);
+    triggerModal.addEventListener("click", openModal);
+    modalContent.addEventListener("click", modalClick);
+}
+
+function rootModalClick () {
+    modalRoot.classList.remove("show__modal");
+}
+
+function openModal() {
+    modalRoot.classList.add('show__modal');
+}
+
+function modalClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+    return false;
 }
 
 window.document.onreadystatechange = () => {
@@ -35,4 +66,6 @@ window.document.onreadystatechange = () => {
                 clearInterval(intervalProgress)
         }
     }
+
+    setupModal();
 }
