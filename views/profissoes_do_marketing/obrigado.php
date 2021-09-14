@@ -20,11 +20,7 @@
         e as informações referentes ao evento.
     </p>
 
-    <a href="<?php echo $_ENV['WHATSAPP_URL']; ?>" 
-        target="_blank" 
-        rel="norel nofollow" 
-        style="max-width: 300px; margin: auto;"
-        class="call_to_action">QUERO ENTRAR NO GRUPO VIP</a>
+    <a href="https://rebrand.ly/3profissoes" target="_blank" rel="norel nofollow" style="max-width: 300px; margin: auto;" class="call_to_action">QUERO ENTRAR NO GRUPO VIP</a>
 
     <p class="text__center">Grupo fechado e silencioso</p>
 </section>

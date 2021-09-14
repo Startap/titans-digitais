@@ -65,7 +65,7 @@ class Renderer
             if (strpos($_SERVER['REQUEST_URI'], 'obrigado') !== false) {
                 $fbTag = <<<pixelConversion
                     <script>
-                        fbq('trackCustom', 'obrigado')
+                        fbq('trackCustom', 'obrigado-profissoes')
                         gtag('event', 'conversion', {'send_to': 'AW-981525115/euVpCJv--pMCEPvEg9QD'});
                     </script>
                 pixelConversion;

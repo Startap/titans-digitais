@@ -211,7 +211,7 @@ p.text__center {
 }
 
 #_form_5_ .modal__button {
-    width: 100%;
+    width: 100% !important;
 }
 
 .evento__online {
